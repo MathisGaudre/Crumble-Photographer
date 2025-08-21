@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  cursor: url('./src/assets/cursor.png'), auto;
+  background-color: #CDBFE0;
+}
+
+.nav-scrolled {
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  color: #1a202c;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+/* IE/Edge (anciennes versions) */
+html {
+  -ms-overflow-style: none;
+}

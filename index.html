@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500&family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              site: { bg: "#CDBFE0", card: "#FAF7F3", accent: "#BFA785" },
+              ink: { base: "#1E1E1E", mute: "#5A5A5A" },
+            },
+            fontFamily: {
+              serif: ["Playfair Display", "ui-serif", "Georgia"],
+              sans: ["Inter", "ui-sans-serif", "system-ui"],
+              display: ["Cormorant", "ui-serif", "Georgia"],
+            },
+            letterSpacing: {
+              wideish: ".03em",
+            },
+            boxShadow: {
+              soft: "0 14px 36px rgba(0,0,0,.25)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .menu-item span {
+        letter-spacing: 0.02em;
+      }
+      .menu-item em {
+        opacity: 0.85;
+      }
+    </style>
+
+    <title>Crumble | Photographer</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
