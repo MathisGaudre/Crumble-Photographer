@@ -1,8 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  cursor: url('./src/assets/cursor.png'), auto;
+  cursor: url('./src/assets/images/cursor.png'), auto;
   background-color: #CDBFE0;
+}
+
+a:hover {
+  cursor: url('./src/assets/images/pointer.png'), auto;
 }
 
 .nav-scrolled {
@@ -11,18 +15,15 @@ body {
   color: #1a202c;
 }
 
-/* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
   display: none;
 }
 
-/* Firefox */
 html {
   scrollbar-width: none;
   scroll-behavior: smooth;
 }
 
-/* IE/Edge (anciennes versions) */
 html {
   -ms-overflow-style: none;
 }
