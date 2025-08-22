@@ -24,7 +24,7 @@ onMounted(() => {
     <div class="bg-site-bg text-ink-base antialiased">
 
         <header
-            class="relative h-screen w-full bg-[url('/public/images/hero.avif')] bg-cover bg-center bg-fixed select-none">
+            class="relative h-screen w-full bg-[url('/images/hero.avif')] bg-cover bg-center bg-fixed select-none">
             <div class="absolute inset-0 bg-black/45"></div>
 
             <nav id="navbar" class="fixed top-0 lg:left-0 right-0 w-full z-50 transition-all duration-500">
