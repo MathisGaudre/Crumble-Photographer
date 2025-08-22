@@ -1,12 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  cursor: url('./src/assets/images/cursor.png'), auto;
+  cursor: url('/src/assets/images/cursor.png'), auto;
   background-color: #CDBFE0;
 }
 
 a:hover {
-  cursor: url('./src/assets/images/pointer.png'), auto;
+  cursor: url('/src/assets/images/pointer.png'), auto;
 }
 
 .nav-scrolled {
