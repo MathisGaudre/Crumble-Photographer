@@ -24,7 +24,7 @@ onMounted(() => {
     <div class="bg-site-bg text-ink-base antialiased">
 
         <header
-            class="relative h-screen w-full bg-[url('./src/assets/images/hero.avif')] bg-cover bg-center bg-fixed select-none">
+            class="relative h-screen w-full bg-[url('/public/images/hero.avif')] bg-cover bg-center bg-fixed select-none">
             <div class="absolute inset-0 bg-black/45"></div>
 
             <nav id="navbar" class="fixed top-0 lg:left-0 right-0 w-full z-50 transition-all duration-500">
@@ -89,7 +89,7 @@ onMounted(() => {
                         </p>
                     </div>
                     <div>
-                        <img src="./../assets/images/favicon.jpg" alt="About Image" class="w-full h-auto rounded-full shadow-lg" />
+                        <img src="/images/favicon.jpg" alt="About Image" class="w-full h-auto rounded-full shadow-lg" />
                     </div>
                 </Card>
             </div>
@@ -107,10 +107,10 @@ onMounted(() => {
                     <div class="flex flex-row gap-16 mx-auto">
                         <CardPortfolio
                             name="PORTRAIT"
-                            imgSrc="/src/assets/images/portrait.avif" />
+                            imgSrc="/images/portrait.avif" />
                         <CardPortfolio
                             name="ESPORT"
-                            imgSrc="/src/assets/images/esport.avif" />
+                            imgSrc="/images/esport.avif" />
                     </div>
                 </Card>
             </div>
