@@ -1,6 +1,6 @@
 <template>
     <footer class="bg-purple-50 border-t border-[#8C6FB4] shadow-md text-gray-700 mt-16">
-        <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-start md:items-stretch">
+        <div class="w-2/3 mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-start md:items-stretch">
             <div class="flex-1 mb-6 md:mb-0 text-center">
                 <div class="mb-2">
                     <div class="text-6xl font-titre tracking-widest tracking-[32px]">CRUMBLE</div>
