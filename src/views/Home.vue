@@ -2,6 +2,7 @@
 import { onMounted, onUnmounted, ref, computed } from "vue";
 import Card from "../components/Card.vue";
 import CardPortfolio from "../components/CardPortfolio.vue";
+import Footer from "../components/Footer.vue";
 
 onMounted(() => {
     const navbar = document.getElementById("navbar");
@@ -107,7 +108,7 @@ const objetLabel = computed(() => {
 
         <div class="border-t-2 border-ink-mute my-12 w-1/3 mx-auto"></div>
 
-        <section id="shop" class="bg-site-bg">
+        <section id="portfolio" class="bg-site-bg">
             <div class="w-4xl mx-auto px-6 text-center flex flex-col gap-8">
                 <div>
                     <h2 class="font-mini_titre text-5xl text-ink-base">Portfolio</h2>
@@ -249,5 +250,7 @@ const objetLabel = computed(() => {
                 </form>
             </div>
         </section>
+
+        <Footer />
     </div>
 </template>
