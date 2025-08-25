@@ -1,7 +1,7 @@
 <template>
     <footer class="bg-purple-50 border-t border-[#8C6FB4] shadow-md text-gray-700 mt-16">
-        <div class="w-2/3 mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-start md:items-stretch">
-            <div class="flex-1 mb-6 md:mb-0 text-center">
+        <div class="lg:mx-72 md:mx-24 mx-3 px-6 py-6 flex flex-col md:flex-row justify-between items-start md:items-stretch">
+            <div class="flex-1 text-center md:w-1/2 w-full">
                 <div class="mb-2">
                     <div class="text-6xl font-titre tracking-widest tracking-[32px]">CRUMBLE</div>
                     <div class="italic text-2xl font-cormorant -mt-2">photographe</div>
@@ -17,7 +17,7 @@
                         </svg>
 
                     </a>
-                    <a href="#" aria-label="Twitter" class="hover:text-purple-500">
+                    <a href="https://x.com/CrumblePhoto" aria-label="Twitter" class="hover:text-purple-500">
                         <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
                             height="24" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -28,9 +28,9 @@
                 </div>
             </div>
 
-            <div class="hidden md:block border-l border-purple-200 mx-4"></div>
+            <div class="md:border-l border-b md:border-b-0 border-purple-200 w-2/3 md:w-fit mx-auto my-4 md:mx-4 md:my-0"></div>
 
-            <div class="flex-1 mb-6 md:mb-0 md:px-8 text-center">
+            <div class="flex-1 mb-0 text-center md:w-1/2 w-full">
                 <div class="font-mini_titre font-semibold text-2xl mb-2">Explore</div>
                 <ul class="space-y-1 font-helvetica">
                     <li><a href="#about" class="hover:text-purple-500">À propos</a></li>
