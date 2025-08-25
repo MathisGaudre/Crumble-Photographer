@@ -10,7 +10,7 @@ let lastScrollY = window.scrollY;
 
 const handleScroll = () => {
     const currentScrollY = window.scrollY;
-    isScrolled.value = currentScrollY > 0;
+    isScrolled.value = currentScrollY > 50;
     if (currentScrollY > lastScrollY && currentScrollY > 50) {
         // Scroll vers le bas : cache la navbar
         showNavbar.value = false;
@@ -52,7 +52,7 @@ const objetLabel = computed(() => {
                         ? 'bg-[#EAE6F6]/80 backdrop-blur-xl shadow'
                         : 'bg-transparent'
                 ]">
-                    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-center">
+                    <div class="w-full mx-auto px-2 md:px-6 py-4 flex justify-center">
                         <ul :class="[
                             'flex gap-8 md:gap-12 font-serif transition-colors duration-300',
                             isScrolled
@@ -61,26 +61,26 @@ const objetLabel = computed(() => {
                         ]">
                             <li class="menu-item text-right">
                                 <a href="#about">
-                                    <span class="block font-mini_titre text-lg">À propos</span>
-                                    <em class="block italic font-cormorant text-lg text-center">bio</em>
+                                    <span class="block font-mini_titre md:text-lg text-sm text-center">À propos</span>
+                                    <em class="block italic font-cormorant md:text-lg text-md text-center">bio</em>
                                 </a>
                             </li>
                             <li class="menu-item text-right">
                                 <a href="#portfolio">
-                                    <span class="block font-mini_titre text-lg">Portfolio</span>
-                                    <em class="block italic font-cormorant text-lg text-center">mon travail</em>
+                                    <span class="block font-mini_titre md:text-lg text-sm text-center">Portfolio</span>
+                                    <em class="block italic font-cormorant md:text-lg text-md text-center">mon travail</em>
                                 </a>
                             </li>
                             <li class="menu-item text-right">
                                 <a href="#shop">
-                                    <span class="block font-mini_titre text-lg">Formules</span>
-                                    <em class="block italic font-cormorant text-lg text-center">séances</em>
+                                    <span class="block font-mini_titre md:text-lg text-sm text-center">Formules</span>
+                                    <em class="block italic font-cormorant md:text-lg text-md text-center">séances</em>
                                 </a>
                             </li>
                             <li class="menu-item text-right">
                                 <a href="#contact">
-                                    <span class="block font-mini_titre text-lg">Contact</span>
-                                    <em class="block italic font-cormorant text-lg text-center">me joindre</em>
+                                    <span class="block font-mini_titre md:text-lg text-sm text-center">Contact</span>
+                                    <em class="block italic font-cormorant md:text-lg text-md text-center">me joindre</em>
                                 </a>
                             </li>
                         </ul>
@@ -100,8 +100,8 @@ const objetLabel = computed(() => {
             </div>
         </header>
 
-        <section id="about" class="bg-site-bg py-10 xl:mx-72 lg:mx-24 mx-0">
-            <div class="w-full px-6 text-center flex flex-col gap-8">
+        <section id="about" class="bg-site-bg pt-10 xl:mx-72 lg:mx-24 mx-3">
+            <div class="w-full text-center flex flex-col gap-8">
                 <div>
                     <h2 class="font-mini_titre text-5xl text-ink-base">À propos</h2>
                     <p class="font-serif italic text-ink-base">Derrière l'objectif.</p>
@@ -128,13 +128,13 @@ const objetLabel = computed(() => {
 
         <div class="border-t-2 border-ink-mute my-12 w-1/3 mx-auto"></div>
 
-        <section id="portfolio" class="bg-site-bg xl:mx-72 lg:mx-24 mx-0">
-            <div class="w-full px-6 text-center flex flex-col gap-8">
+        <section id="portfolio" class="bg-site-bg xl:mx-72 lg:mx-24 mx-3">
+            <div class="w-full text-center flex flex-col gap-8">
                 <div>
                     <h2 class="font-mini_titre text-5xl text-ink-base">Portfolio</h2>
                     <p class="font-serif italic text-ink-base">Découvrez mes réalisations.</p>
                 </div>
-                <Card size="w-full flex flex-row justify-evenly">
+                <Card size="w-full flex flex-row justify-evenly p-3 md:p-10">
                     <CardPortfolio name="PORTRAIT" imgSrc="/images/portrait.avif" />
                     <CardPortfolio name="ESPORT" imgSrc="/images/esport.avif" />
                 </Card>
@@ -143,8 +143,8 @@ const objetLabel = computed(() => {
 
         <div class="border-t-2 border-ink-mute my-12 w-1/3 mx-auto"></div>
 
-        <section id="shop" class="bg-site-bg xl:mx-72 lg:mx-24 mx-0">
-            <div class="w-full px-6 text-center flex flex-col gap-8">
+        <section id="shop" class="bg-site-bg xl:mx-72 lg:mx-24 mx-3">
+            <div class="w-full text-center flex flex-col gap-8">
                 <div>
                     <h2 class="font-mini_titre text-5xl text-ink-base">Formules</h2>
                     <p class="font-serif italic text-ink-base">À votre image.</p>
@@ -201,22 +201,22 @@ const objetLabel = computed(() => {
 
         <div class="border-t-2 border-ink-mute my-12 w-1/3 mx-auto"></div>
 
-        <section id="contact" class="bg-site-bg xl:mx-72 lg:mx-24 mx-0">
+        <section id="contact" class="bg-site-bg xl:mx-72 lg:mx-24 mx-3">
             <div class="w-full text-center flex flex-col gap-8">
                 <div>
                     <h2 class="font-mini_titre text-5xl text-ink-base">Contact</h2>
                     <p class="font-serif italic text-ink-base">À votre image.</p>
                 </div>
                 <form class="bg-[#EAE6F6] rounded-lg p-8 shadow-lg flex flex-col gap-6" @submit.prevent>
-                    <div class="flex flex-row">
-                        <div class="flex flex-col gap-6">
-                            <div class="flex flex-row gap-6">
-                                <div class="flex-1 flex flex-col gap-2">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex flex-col gap-6 w-full md:w-1/2">
+                            <div class="flex flex-row flex-wrap gap-6 w-full">
+                                <div class="w-full flex flex-col gap-2">
                                     <label for="prenom" class="text-left font-medium text-ink-base">Prénom *</label>
                                     <input id="prenom" name="prenom" type="text" required
                                         class="rounded-md border border-[#CDBFE0] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#CDBFE0] bg-white" />
                                 </div>
-                                <div class="flex-1 flex flex-col gap-2">
+                                <div class="w-full flex flex-col gap-2">
                                     <label for="nom" class="text-left font-medium text-ink-base">Nom *</label>
                                     <input id="nom" name="nom" type="text" required
                                         class="rounded-md border border-[#CDBFE0] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#CDBFE0] bg-white" />
@@ -249,7 +249,7 @@ const objetLabel = computed(() => {
                         </div>
 
 
-                        <div class="flex-1 flex flex-col gap-2 md:ml-6">
+                        <div class="flex-1 flex flex-col gap-2 w-full md:w-1/2">
                             <label for="envies" class="text-left font-medium text-ink-base">Vos envies et besoins pour
                                 ce
                                 shooting *</label>
