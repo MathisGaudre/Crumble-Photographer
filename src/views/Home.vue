@@ -2,7 +2,6 @@
 import { onMounted, onUnmounted, ref, computed } from "vue";
 import Card from "../components/Card.vue";
 import CardPortfolio from "../components/CardPortfolio.vue";
-import Footer from "../components/Footer.vue";
 
 const showNavbar = ref(true);
 const isScrolled = ref(false);
@@ -270,8 +269,6 @@ const objetLabel = computed(() => {
                 </form>
             </div>
         </section>
-
-        <Footer />
     </div>
 </template>
 

@@ -1,5 +1,6 @@
 <script setup>
 import PageLoader from './components/PageLoader.vue';
+import Footer from "./components/Footer.vue";
 
 
 
@@ -8,4 +9,5 @@ import PageLoader from './components/PageLoader.vue';
 <template>
   <PageLoader />
   <RouterView />
+  <Footer />
 </template>

@@ -33,10 +33,10 @@
             <div class="flex-1 mb-0 text-center md:w-1/2 w-full">
                 <div class="font-mini_titre font-semibold text-2xl mb-2">Explore</div>
                 <ul class="space-y-1 font-helvetica">
-                    <li><a href="#about" class="hover:text-purple-500">À propos</a></li>
-                    <li><a href="#portfolio" class="hover:text-purple-500">Portfolio</a></li>
-                    <li><a href="#shop" class="hover:text-purple-500">Formules</a></li>
-                    <li><a href="#contact" class="hover:text-purple-500">Contact</a></li>
+                    <li><a href="/#about" class="hover:text-purple-500">À propos</a></li>
+                    <li><a href="/#portfolio" class="hover:text-purple-500">Portfolio</a></li>
+                    <li><a href="/#shop" class="hover:text-purple-500">Formules</a></li>
+                    <li><a href="/#contact" class="hover:text-purple-500">Contact</a></li>
                 </ul>
             </div>
         </div>
