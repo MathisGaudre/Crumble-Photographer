@@ -1,26 +1,3 @@
-@font-face {
-  font-family: 'Helvetica';
-  src: url('/font/helvetica/Helvetica.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Helvetica';
-  src: url('/font/helvetica/Helvetica-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Helvetica';
-  src: url('/font/helvetica/Helvetica-Oblique.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-
 body {
   margin: 0;
   padding: 0;

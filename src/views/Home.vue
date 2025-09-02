@@ -11,10 +11,8 @@ const handleScroll = () => {
     const currentScrollY = window.scrollY;
     isScrolled.value = currentScrollY > 50;
     if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        // Scroll vers le bas : cache la navbar
         showNavbar.value = false;
     } else if (currentScrollY < lastScrollY) {
-        // Scroll vers le haut : affiche la navbar
         showNavbar.value = true;
     }
     lastScrollY = currentScrollY;
@@ -90,7 +88,7 @@ const objetLabel = computed(() => {
             <div class="relative z-10 h-full grid place-items-center">
                 <div class="text-center text-white">
                     <h1 class="font-titre tracking-[32px] text-6xl md:text-[128px] leading-none drop-shadow">
-                        Crumble
+                        CRUMBLE
                     </h1>
                     <p class="mt-4 font-cormorant italic text-lg md:text-[34px] tracking-wideish opacity-90">
                         photographe
