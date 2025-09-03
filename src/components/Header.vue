@@ -1,11 +1,11 @@
 <template>
   <nav class="xl:mx-72 lg:mx-24 mx-0">
     <div
-      class="flex flex-col md:flex-row items-center justify-between md:px-6 py-4 gap-2 md:gap-0"
+      class="flex flex-col md:flex-row items-center justify-between py-4 gap-2 md:gap-0"
     >
       <a href="/"
         ><span
-          class="font-titre tracking-[12px] text-2xl md:text-[48px] leading-none drop-shadow"
+          class="font-titre tracking-[12px] text-3xl md:text-[48px] leading-none drop-shadow"
           >CRUMBLE</span
         ></a
       >
