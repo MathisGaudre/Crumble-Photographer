@@ -6,7 +6,7 @@
                     <div class="text-6xl font-titre tracking-widest tracking-[32px]">CRUMBLE</div>
                     <div class="italic text-2xl font-cormorant -mt-2">photographe</div>
                 </div>
-                <div class="text-sm mb-4">Editorial portraits &amp; esports photography.</div>
+                <div class="text-sm mb-4">Portraits &amp; photographie esport.</div>
                 <div class="flex justify-center space-x-4">
                     <a href="#" aria-label="Instagram" class="hover:text-purple-500">
                         <svg class="w-6 h-6" aria-hidden="true"
@@ -31,7 +31,7 @@
             <div class="md:border-l border-b md:border-b-0 border-purple-200 w-2/3 md:w-fit mx-auto my-4 md:mx-4 md:my-0"></div>
 
             <div class="flex-1 mb-0 text-center md:w-1/2 w-full">
-                <div class="font-mini_titre font-semibold text-2xl mb-2">Explore</div>
+                <div class="font-mini_titre font-semibold text-2xl mb-2">Parcourir</div>
                 <ul class="space-y-1 font-helvetica">
                     <li><a href="/#about" class="hover:text-purple-500">À propos</a></li>
                     <li><a href="/#portfolio" class="hover:text-purple-500">Portfolio</a></li>
@@ -43,7 +43,7 @@
         <div class="border-t border-purple-200 mt-2">
             <div class="max-w-6xl mx-auto px-6 py-2 flex justify-between text-xs text-gray-500">
                 <span>© 2025 Crumble - Tous droits réservés.</span>
-                <a href="/terms" class="hover:text-purple-500">Terms</a>
+                <a href="/terms" class="hover:text-purple-500">Conditions générales de vente</a>
             </div>
         </div>
     </footer>
