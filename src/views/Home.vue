@@ -33,7 +33,29 @@ const objetLabel = computed(() => {
     return "Formule / Objet du devis / Objet";
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const els = document.querySelectorAll('.reveal')
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const d = e.target.dataset.delay || 0
+        if(d) e.target.style.transitionDelay = d+'ms'
+        e.target.classList.add('is-visible')
+        io.unobserve(e.target)
+      }
+    })
+  },{ threshold:.12 })
+
+  els.forEach(el=>io.observe(el))
+
+  // Stagger auto par conteneur
+  document.querySelectorAll('[data-stagger]').forEach(g=>{
+    const step = parseInt(g.dataset.stagger,10)||90
+    g.querySelectorAll('.reveal').forEach((el,i)=>el.dataset.delay = i*step)
+  })
+})
 </script>
+
 
 <template>
     <div class="bg-site-bg text-ink-base antialiased">
@@ -44,7 +66,7 @@ const objetLabel = computed(() => {
 
             <transition name="navbar-slide">
                 <nav v-if="showNavbar" id="navbar" :class="[
-                    'fixed top-0 left-0 right-0 w-full z-50 transition-all duration-500',
+                    '.reveal--fade-in fixed top-0 left-0 right-0 w-full z-50 transition-all duration-500',
                     isScrolled
                         ? 'bg-[#EAE6F6]/80 backdrop-blur-xl shadow'
                         : 'bg-transparent'
@@ -87,17 +109,17 @@ const objetLabel = computed(() => {
 
             <div class="relative z-10 h-full grid place-items-center">
                 <div class="text-center text-white">
-                    <h1 class="font-titre tracking-[32px] text-6xl md:text-[128px] leading-none drop-shadow">
+                    <h1 class="reveal reveal--fade-up font-titre tracking-[32px] text-6xl md:text-[128px] leading-none drop-shadow">
                         CRUMBLE
                     </h1>
-                    <p class="mt-4 font-cormorant italic text-lg md:text-[34px] tracking-wideish opacity-90">
+                    <p class="reveal reveal--fade-up mt-4 font-cormorant italic text-lg md:text-[34px] tracking-wideish opacity-90">
                         photographe
                     </p>
                 </div>
             </div>
         </header>
 
-        <section id="about" class="pt-10 xl:mx-72 lg:mx-24 mx-3">
+        <section id="about" class="pt-10 xl:mx-64 lg:mx-24 mx-3 reveal reveal--fade-up">
             <div class="w-full text-center flex flex-col gap-8">
                 <div>
                     <h2 class="font-mini_titre text-5xl text-ink-base">À propos</h2>
@@ -125,22 +147,22 @@ const objetLabel = computed(() => {
 
         <div class="border-t-2 border-ink-mute my-12 w-1/3 mx-auto"></div>
 
-        <section id="portfolio" class="xl:mx-72 lg:mx-24 mx-3">
+        <section id="portfolio" class="xl:mx-64 lg:mx-24 mx-3 reveal reveal--fade-up">
             <div class="w-full text-center flex flex-col gap-8">
                 <div>
                     <h2 class="font-mini_titre text-5xl text-ink-base">Portfolio</h2>
                     <p class="font-serif italic text-ink-base">Découvrez mes réalisations.</p>
                 </div>
-                <Card size="w-full grid grid-cols-2 h-5/6 p-3 gap-3 md:p-10">
-                    <CardPortfolio name="PORTRAIT" imgSrc="/images/portrait/51a00d_c2d37f7075a846798b32ffaedf9ee6a9~mv2.jpeg" />
-                    <CardPortfolio name="ESPORT" imgSrc="/images/esport/51a00d_ea1161ad4be14d37a393c2ff809a0bf4~mv2.jpeg" />
+                <Card size="w-full grid grid-cols-2 p-3 gap-3 md:gap-10 md:p-10">
+                    <CardPortfolio class="reveal reveal--fade-in" name="PORTRAIT" imgSrc="/images/portrait/51a00d_c2d37f7075a846798b32ffaedf9ee6a9~mv2.jpeg" />
+                    <CardPortfolio class="reveal reveal--fade-in" name="ESPORT" imgSrc="/images/esport/51a00d_ea1161ad4be14d37a393c2ff809a0bf4~mv2.jpeg" />
                 </Card>
             </div>
         </section>
 
         <div class="border-t-2 border-ink-mute my-12 w-1/3 mx-auto"></div>
 
-        <section id="shop" class="xl:mx-72 lg:mx-24 mx-3">
+        <section id="shop" class="xl:mx-64 lg:mx-24 mx-3 reveal reveal--fade-up">
             <div class="w-full text-center flex flex-col gap-8">
                 <div>
                     <h2 class="font-mini_titre text-5xl text-ink-base">Formules</h2>
@@ -148,7 +170,7 @@ const objetLabel = computed(() => {
                 </div>
                 <div class="flex flex-col gap-8 md:flex-row md:flex-wrap md:gap-6 lg:flex-nowrap lg:gap-10 justify-between">
                     <div class="w-full md:w-[48%] lg:w-1/3 flex">
-                        <Card size="w-full flex flex-col text-ink-base gap-6">
+                        <Card size="w-full flex flex-col text-ink-base gap-6 reveal reveal--scale-in">
                             <h3 class="font-mini_titre text-3xl">Formule découverte</h3>
                             <h4 class="text-2xl">€120</h4>
                             <div class="flex flex-col gap-4 font-helvetica">
@@ -162,7 +184,7 @@ const objetLabel = computed(() => {
                         </Card>
                     </div>
                     <div class="w-full md:w-[48%] lg:w-1/3 flex">
-                        <Card size="w-full flex flex-col text-ink-base gap-6">
+                        <Card size="w-full flex flex-col text-ink-base gap-6 reveal reveal--scale-in">
                             <h3 class="font-mini_titre text-3xl">Formule classique</h3>
                             <h4 class="text-2xl">€210</h4>
                             <div class="flex flex-col gap-4 font-helvetica">
@@ -176,7 +198,7 @@ const objetLabel = computed(() => {
                         </Card>
                     </div>
                     <div class="w-full md:w-full lg:w-1/3 flex">
-                        <Card size="w-full flex flex-col text-ink-base gap-6">
+                        <Card size="w-full flex flex-col text-ink-base gap-6 reveal reveal--scale-in">
                             <h3 class="font-mini_titre text-3xl">Formule découverte</h3>
                             <h4 class="text-2xl">€300</h4>
                             <div class="flex flex-col gap-4 font-helvetica">
@@ -198,7 +220,7 @@ const objetLabel = computed(() => {
 
         <div class="border-t-2 border-ink-mute my-12 w-1/3 mx-auto"></div>
 
-        <section id="contact" class="xl:mx-72 lg:mx-24 mx-3">
+        <section id="contact" class="xl:mx-64 lg:mx-24 mx-3 reveal reveal--fade-up">
             <div class="w-full text-center flex flex-col gap-8">
                 <div>
                     <h2 class="font-mini_titre text-5xl text-ink-base">Contact</h2>

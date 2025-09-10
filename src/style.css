@@ -34,3 +34,12 @@ label:hover {
 html {
   scroll-behavior: smooth;
 }
+
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;will-change:opacity,transform}
+.reveal--fade-up{transform:translateY(16px)}
+.reveal--fade-in{transform:none}
+.reveal--scale-in{transform:scale(.985)}
+.is-visible.reveal--fade-up{opacity:1;transform:translateY(0)}
+.is-visible.reveal--fade-in{opacity:1;transform:none}
+.is-visible.reveal--scale-in{opacity:1;transform:scale(1)}

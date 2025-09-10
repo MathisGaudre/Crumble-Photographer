@@ -23,21 +23,43 @@ if (type !== "portrait" && type !== "esport") {
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const els = document.querySelectorAll('.reveal')
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const d = e.target.dataset.delay || 0
+        if(d) e.target.style.transitionDelay = d+'ms'
+        e.target.classList.add('is-visible')
+        io.unobserve(e.target)
+      }
+    })
+  },{ threshold:.12 })
+
+  els.forEach(el=>io.observe(el))
+
+  // Stagger auto par conteneur
+  document.querySelectorAll('[data-stagger]').forEach(g=>{
+    const step = parseInt(g.dataset.stagger,10)||90
+    g.querySelectorAll('.reveal').forEach((el,i)=>el.dataset.delay = i*step)
+  })
+})
+
 </script>
 
 <template>
   <Header />
 
-    <main class="flex flex-col gap-8 xl:mx-46 lg:mx-24 mx-3">
+    <main class="flex flex-col mt-4 gap-8 xl:mx-46 lg:mx-24 mx-3">
         <div>
             <h1 class="font-mini_titre text-2xl md:text-4xl text-ink-base text-center">
                 Portfolio
             </h1>
             <p class="font-serif italic text-center text-ink-base">{{ type == 'portrait' ? 'Portraits' : 'Esport' }}.</p>
         </div>
-        <div class="bg-white w-full py-8 px-4 md:px-8">
+        <div class="bg-white w-full py-8 px-4 md:px-8 reveal reveal--fade-up">
             <div class="columns-1 sm:columns-2 md:columns-4 gap-2 space-y-2">
-                <img :src="`/${img}`" v-for="img in images" :key="img"  draggable="false" class="w-full h-auto object-cover transition-transform duration-300 hover:scale-[102%] cursor-pointer" />
+                <img :src="`/${img}`" v-for="img in images" :key="img"  draggable="false" class="reveal reveal--fade-up w-full h-auto object-cover transition-transform duration-300 hover:scale-[102%] cursor-pointer" />
             </div>
         </div>
     </main>

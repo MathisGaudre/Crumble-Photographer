@@ -1,5 +1,27 @@
 <script setup>
 import Header from '../components/Header.vue';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const els = document.querySelectorAll('.reveal')
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const d = e.target.dataset.delay || 0
+        if(d) e.target.style.transitionDelay = d+'ms'
+        e.target.classList.add('is-visible')
+        io.unobserve(e.target)
+      }
+    })
+  },{ threshold:.12 })
+
+  els.forEach(el=>io.observe(el))
+
+  // Stagger auto par conteneur
+  document.querySelectorAll('[data-stagger]').forEach(g=>{
+    const step = parseInt(g.dataset.stagger,10)||90
+    g.querySelectorAll('.reveal').forEach((el,i)=>el.dataset.delay = i*step)
+  })
+})
 </script>
 
 <template>
@@ -9,7 +31,7 @@ import Header from '../components/Header.vue';
     <h1 class="font-mini_titre text-2xl md:text-4xl text-ink-base text-center">
       Conditions générales de vente
     </h1>
-    <div class="bg-white w-full py-8 px-4 md:px-8">
+    <div class="bg-white w-full py-8 px-4 md:px-8 reveal reveal--fade-up">
       <h2 class="font-mini_titre md:text-3xl text-2xl mb-4">Préambule</h2>
       <p class="font-helvetica mb-6 text-sm">
         Les présentes conditions générales de vente créent un accord légal et
