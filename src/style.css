@@ -1,27 +1,33 @@
 body {
   margin: 0;
   padding: 0;
-  cursor: url('/images/cursor2.png'), auto;
+  cursor: url("/images/cursor2.png"), auto;
   background-color: #CDBFE0;
 }
 
-a:hover, button:hover {
-  cursor: url('/images/pointer.png'), auto;
+
+a:hover,
+button:hover {
+  cursor: url("/images/pointer.png"), auto;
 }
 
-input, textarea {
-  font-family: 'Helvetica', sans-serif;
+input,
+textarea {
+  font-family: "Helvetica", sans-serif;
   font-size: 1rem;
   color: #1a202c;
 }
 
-input:hover, textarea:hover, label:hover {
-  cursor: url('/images/text.png') 12 12, auto;
+input:hover,
+textarea:hover,
+label:hover {
+  cursor: url("/images/text.png") 12 12, auto;
 }
 
 .nav-scrolled {
   backdrop-filter: blur(6px);
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
   color: #1a202c;
 }
 

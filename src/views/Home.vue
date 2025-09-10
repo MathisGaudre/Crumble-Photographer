@@ -97,7 +97,7 @@ const objetLabel = computed(() => {
             </div>
         </header>
 
-        <section id="about" class="bg-site-bg pt-10 xl:mx-72 lg:mx-24 mx-3">
+        <section id="about" class="pt-10 xl:mx-72 lg:mx-24 mx-3">
             <div class="w-full text-center flex flex-col gap-8">
                 <div>
                     <h2 class="font-mini_titre text-5xl text-ink-base">À propos</h2>
@@ -125,7 +125,7 @@ const objetLabel = computed(() => {
 
         <div class="border-t-2 border-ink-mute my-12 w-1/3 mx-auto"></div>
 
-        <section id="portfolio" class="bg-site-bg xl:mx-72 lg:mx-24 mx-3">
+        <section id="portfolio" class="xl:mx-72 lg:mx-24 mx-3">
             <div class="w-full text-center flex flex-col gap-8">
                 <div>
                     <h2 class="font-mini_titre text-5xl text-ink-base">Portfolio</h2>
@@ -140,13 +140,13 @@ const objetLabel = computed(() => {
 
         <div class="border-t-2 border-ink-mute my-12 w-1/3 mx-auto"></div>
 
-        <section id="shop" class="bg-site-bg xl:mx-72 lg:mx-24 mx-3">
+        <section id="shop" class="xl:mx-72 lg:mx-24 mx-3">
             <div class="w-full text-center flex flex-col gap-8">
                 <div>
                     <h2 class="font-mini_titre text-5xl text-ink-base">Formules</h2>
                     <p class="font-serif italic text-ink-base">À votre image.</p>
                 </div>
-                <div class="flex flex-col gap-8 md:flex-row md:flex-wrap md:gap-6 lg:flex-nowrap lg:gap-16 justify-between">
+                <div class="flex flex-col gap-8 md:flex-row md:flex-wrap md:gap-6 lg:flex-nowrap lg:gap-10 justify-between">
                     <div class="w-full md:w-[48%] lg:w-1/3 flex">
                         <Card size="w-full flex flex-col text-ink-base gap-6">
                             <h3 class="font-mini_titre text-3xl">Formule découverte</h3>
@@ -198,7 +198,7 @@ const objetLabel = computed(() => {
 
         <div class="border-t-2 border-ink-mute my-12 w-1/3 mx-auto"></div>
 
-        <section id="contact" class="bg-site-bg xl:mx-72 lg:mx-24 mx-3">
+        <section id="contact" class="xl:mx-72 lg:mx-24 mx-3">
             <div class="w-full text-center flex flex-col gap-8">
                 <div>
                     <h2 class="font-mini_titre text-5xl text-ink-base">Contact</h2>
