@@ -39,7 +39,7 @@ const objetLabel = computed(() => {
     <div class="bg-site-bg text-ink-base antialiased">
 
         <header
-            class="relative h-screen w-full bg-[url('/images/hero_4k.jpg')] bg-cover bg-center bg-fixed select-none">
+            class="relative h-screen w-full bg-[url('/images/portrait/51a00d_830cb5a241e2444db1012859df6a7690~mv2.jpeg')] bg-cover bg-center bg-fixed select-none">
             <div class="absolute inset-0 bg-black/45"></div>
 
             <transition name="navbar-slide">
@@ -131,9 +131,9 @@ const objetLabel = computed(() => {
                     <h2 class="font-mini_titre text-5xl text-ink-base">Portfolio</h2>
                     <p class="font-serif italic text-ink-base">Découvrez mes réalisations.</p>
                 </div>
-                <Card size="w-full flex flex-row justify-evenly p-3 md:p-10">
-                    <CardPortfolio name="PORTRAIT" imgSrc="/images/portrait.avif" />
-                    <CardPortfolio name="ESPORT" imgSrc="/images/esport.avif" />
+                <Card size="w-full grid grid-cols-2 h-5/6 p-3 gap-3 md:p-10">
+                    <CardPortfolio name="PORTRAIT" imgSrc="/images/portrait/51a00d_c2d37f7075a846798b32ffaedf9ee6a9~mv2.jpeg" />
+                    <CardPortfolio name="ESPORT" imgSrc="/images/esport/51a00d_ea1161ad4be14d37a393c2ff809a0bf4~mv2.jpeg" />
                 </Card>
             </div>
         </section>

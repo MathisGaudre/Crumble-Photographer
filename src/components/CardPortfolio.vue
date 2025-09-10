@@ -9,7 +9,7 @@ defineProps({
 <template>
     <a :href="`/photos/${name.toLowerCase()}`">
         <div class="relative group w-full">
-            <img :src="imgSrc" alt="Portfolio Image"
+            <img :src="imgSrc" :alt="'Portfolio Image ' + name"
                 class="w-full h-auto rounded-lg shadow-lg transition duration-500 ease-in-out group-hover:blur-sm" />
             <div class="absolute inset-0 flex items-end justify-center pointer-events-none">
                 <span
