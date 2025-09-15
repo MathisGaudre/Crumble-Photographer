@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h2 class="font-mini_titre text-5xl text-ink-base">Contact</h2>
                     <p class="font-serif italic text-ink-base">À votre image.</p>
                 </div>
-                <form class="bg-[#EAE6F6] rounded-lg p-8 shadow-lg flex flex-col gap-6" method="POST" netlify-honeypot="bot-field" data-netlify=true name="contact">
+                <form class="bg-[#EAE6F6] rounded-lg p-8 shadow-lg flex flex-col gap-6" method="POST" action="/" netlify-honeypot="bot-field" data-netlify=true name="contact">
                     
                     <!-- requis par Netlify pour relier la soumission -->
     <input type="hidden" name="form-name" value="contact" />
