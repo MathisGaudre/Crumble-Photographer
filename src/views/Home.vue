@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h2 class="font-mini_titre text-5xl text-ink-base">Contact</h2>
                     <p class="font-serif italic text-ink-base">À votre image.</p>
                 </div>
-                <form class="bg-[#EAE6F6] rounded-lg p-8 shadow-lg flex flex-col gap-6" netlify name="contact">
+                <form class="bg-[#EAE6F6] rounded-lg p-8 shadow-lg flex flex-col gap-6" data-netlify=true name="contact-form">
                     <div class="flex flex-col md:flex-row gap-6">
                         <div class="flex flex-col gap-6 w-full md:w-1/2">
                             <div class="flex flex-row flex-wrap gap-6 w-full">
