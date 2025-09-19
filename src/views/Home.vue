@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <template>
   <div class="bg-site-bg text-ink-base antialiased">
     <header
-      class="relative h-screen w-full bg-[url('/images/portrait/51a00d_830cb5a241e2444db1012859df6a7690~mv2.jpeg')] bg-cover bg-center bg-fixed select-none"
+      class="relative h-screen w-full bg-[url('/images/esport/35f19e_11dafef8f7ce4672b1160acb6231e864~mv2.jpeg')] bg-cover bg-center bg-fixed select-none"
     >
       <div class="absolute inset-0 bg-black/45"></div>
 
