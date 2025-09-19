@@ -13,27 +13,21 @@ if (type !== "portrait" && type !== "esport") {
 } else {
   document.title =
     type === "portrait" ? "Portfolio - Portraits" : "Portfolio - Esport";
-  if (type == "esport") {
-    // Fetch images from Google Drive API
-    images.value = [];
-    fetch(
-      "https://www.googleapis.com/drive/v3/files?q='1p3SwzwHWvI-Hjm0V7_zItdSbUP8lAIs_'+in+parents&key=AIzaSyAqb75mKfGgMeC7PDzxnl9v9fo06duJLuE&fields=files(id,name,mimeType,webContentLink)"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.files) {
-          images.value = data.files
-            .filter((f) => f.mimeType.startsWith("image/"))
-            .map((f) => `https://drive.google.com/uc?export=view&id=${f.id}`);
-        }
-      });
-  } else if (type == "portrait") {
-    images = Object.keys(
-      import.meta.glob("../../public/images/portrait/*", { as: "url" })
-    ).map((path) =>
-      path.replace(/^.*\/images\/portrait\//, "images/portrait/")
-    );
-  }
+  let folderID = type === "esport" ? "13s07ylfXDx8aVSQ2TyusVOREGOu3YXce" : "1lz5FtHn2bvHWj2dyqBT53mqUOBtyCIEG"
+  images.value = [];
+  fetch(
+    `https://www.googleapis.com/drive/v3/files?q='${folderID}'+in+parents&key=AIzaSyAqb75mKfGgMeC7PDzxnl9v9fo06duJLuE&fields=files(id,name,mimeType,webContentLink)`
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.files) {
+        images.value = data.files
+          .filter((f) => f.mimeType.startsWith("image/"))
+          .map((f) => `https://drive.google.com/file/d/${f.id}/view?usp=drive_link`);
+      }
+      console.log(images);
+      
+    });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -83,9 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <img
           v-for="img in images"
           :key="img"
-          :src="type === 'esport' ? img : `/${img}`"
+          :src="img"
           draggable="false"
-          class="reveal reveal--fade-up w-full h-auto object-cover transition-transform duration-300 hover:scale-[102%] cursor-pointer"
+          class="w-full h-auto object-cover transition-transform duration-300 hover:scale-[102%] cursor-pointer"
         />
       </div>
     </div>
